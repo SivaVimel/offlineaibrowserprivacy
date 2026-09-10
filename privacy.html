@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Privacy Policy — Offline AI Browser</title>
+<meta name="description" content="Privacy policy for Offline AI Browser: no accounts, no analytics, no data collection. The AI runs on your device.">
+<style>
+  :root{
+    --bg:#0B0D11; --surface:#14181F; --elev:#1C222B; --stroke:#242B35;
+    --text:#F3F5F8; --text2:#9BA6B4; --text3:#6B7684;
+    --accent:#22D3EE; --accent2:#7C6CF6; --ok:#34D399;
+  }
+  @media (prefers-color-scheme: light){
+    :root{
+      --bg:#FFFFFF; --surface:#F7F8FB; --elev:#FFFFFF; --stroke:#E6E9EF;
+      --text:#10141B; --text2:#56606E; --text3:#8A94A2;
+      --accent:#0E9CB8; --accent2:#5B4BE0; --ok:#0E9F6E;
+    }
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--bg); color:var(--text);
+    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:760px;margin:0 auto;padding:56px 22px 96px}
+  .mark{font-weight:800;font-size:15px;letter-spacing:-.2px}
+  .mark span{background:linear-gradient(135deg,var(--accent),var(--accent2));
+    -webkit-background-clip:text;background-clip:text;color:transparent}
+  h1{font-size:34px;line-height:1.15;letter-spacing:-.8px;margin:26px 0 10px;font-weight:800}
+  .lede{color:var(--text2);font-size:17px;margin:0 0 8px}
+  .updated{color:var(--text3);font-size:13px;margin:0 0 36px}
+  h2{font-size:19px;margin:38px 0 10px;font-weight:700;letter-spacing:-.2px}
+  p{margin:0 0 14px;color:var(--text2)}
+  p strong{color:var(--text)}
+  ul{margin:0 0 16px;padding-left:20px;color:var(--text2)}
+  li{margin:0 0 8px}
+  .card{background:var(--surface);border:1px solid var(--stroke);border-radius:16px;padding:18px 20px;margin:0 0 20px}
+  .card.good{border-color:color-mix(in srgb,var(--ok) 40%,var(--stroke))}
+  .pill{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:600;
+    color:var(--text2);background:var(--elev);border:1px solid var(--stroke);
+    border-radius:999px;padding:6px 12px;margin:0 6px 8px 0}
+  .dot{width:7px;height:7px;border-radius:50%;background:var(--ok)}
+  a{color:var(--accent);text-decoration:none;border-bottom:1px solid color-mix(in srgb,var(--accent) 35%,transparent)}
+  a:hover{border-bottom-color:var(--accent)}
+  footer{margin-top:56px;padding-top:22px;border-top:1px solid var(--stroke);color:var(--text3);font-size:13px}
+  code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13.5px;
+    background:var(--elev);border:1px solid var(--stroke);border-radius:6px;padding:1px 6px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="mark">Offline <span>AI</span> Browser</div>
+
+  <h1>Privacy Policy</h1>
+  <p class="lede">Short version: the app has no accounts, no analytics, no advertising, and no servers of ours. The AI runs on your phone.</p>
+  <p class="updated">Last updated 10 September 2026</p>
+
+  <div class="card good">
+    <span class="pill"><span class="dot"></span> No account required</span>
+    <span class="pill"><span class="dot"></span> No analytics or tracking SDKs</span>
+    <span class="pill"><span class="dot"></span> No data sent to us — ever</span>
+    <span class="pill"><span class="dot"></span> Model runs on device</span>
+  </div>
+
+  <h2>What we collect</h2>
+  <p><strong>Nothing.</strong> Offline AI Browser has no backend. We operate no server that receives your searches, the pages you visit, your questions, or any identifier. We cannot see what you do in the app, because none of it reaches us.</p>
+
+  <h2>What stays on your device</h2>
+  <p>The following is stored locally, in the app's own container, and is deleted when you delete the app:</p>
+  <ul>
+    <li><strong>Recent searches and recently opened pages</strong> — shown on the home screen. Clear them any time in Settings → Privacy → Clear recents.</li>
+    <li><strong>Your settings</strong> — chosen search engine, appearance, AI toggles.</li>
+    <li><strong>API keys</strong>, if you connect a cloud AI service (see below).</li>
+    <li><strong>Website data</strong> — cookies and caches created by the sites you visit, exactly as in any browser.</li>
+    <li><strong>The language model</strong> — bundled inside the app.</li>
+  </ul>
+
+  <h2>How the AI works</h2>
+  <p>The app ships with a Llama 3.2 1B model that runs entirely on your device through llama.cpp. When it summarises search results or answers a question about a page, that computation happens on your phone. The text never leaves it.</p>
+  <p>When you tap the assistant on a page, the app reads that page to answer well: the text the publisher provides, and — if "Read the screen too" is on — a screenshot of the current view analysed with Apple's on-device Vision framework for text recognition, scene labels and face <em>detection</em> (counting faces present; no attempt is made to identify anyone). Both are used only to form the prompt for the on-device model. Screenshots are never stored and never uploaded.</p>
+
+  <h2>If you connect a cloud AI service</h2>
+  <p>This is optional and off by default. If you enter an API key for a provider such as Gemini, ChatGPT, Claude, Groq, Mistral, DeepSeek or Qwen — or configure your own endpoint — then <strong>while that engine is selected</strong>, your questions and the relevant page or search text are sent directly from your device to that provider so it can answer.</p>
+  <ul>
+    <li>The request goes straight to the provider. It does not pass through us.</li>
+    <li>Your key is stored only on your device and sent only to that provider.</li>
+    <li>The app states which engine is in use on the home screen and in Settings.</li>
+    <li>Switch back to the on-device model at any time and nothing leaves the phone again.</li>
+  </ul>
+  <p>Data you send to a third-party provider is governed by that provider's privacy policy, not this one.</p>
+
+  <h2>Searching the web</h2>
+  <p>Searching sends your query to the search engines you have selected — DuckDuckGo, Bing, Brave, Startpage, or one you configure — and opening a result loads that website. This is ordinary browsing: those services receive the request directly from your device and handle it under their own policies. We add nothing to it and receive no copy.</p>
+
+  <h2>Permissions</h2>
+  <ul>
+    <li><strong>Microphone and speech recognition</strong> — only while you hold the mic button, to turn speech into a search or a question. Handled by the system.</li>
+  </ul>
+  <p>The app requests no location, contacts, photos, or camera access.</p>
+
+  <h2>Children</h2>
+  <p>The app is a web browser and displays whatever the web returns. It is not directed at children under 13 and collects no information from anyone.</p>
+
+  <h2>Changes</h2>
+  <p>If this policy changes, the revised version will be posted here with a new date. Material changes will also be noted in the App Store release notes.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about privacy: <a href="mailto:support@offlineaibrowser.com">support@offlineaibrowser.com</a></p>
+
+  <footer>
+    Built with Llama. Llama 3.2 is licensed under the Llama 3.2 Community License,
+    Copyright © Meta Platforms, Inc. All Rights Reserved.
+  </footer>
+</div>
+</body>
+</html>
